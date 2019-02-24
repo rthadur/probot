@@ -193,7 +193,7 @@ export class Application {
       const options = {
         Octokit: this.Octokit,
         auth: async () => {
-          const accessToken = await this.app.getInstallationAccessToken({ installationId: id })
+          const accessToken = await this.app.getInstallationAccessToken(646126)
           return `token ${accessToken}`
         },
         baseUrl: process.env.GHE_HOST && `https://${process.env.GHE_HOST}/api/v3`,
